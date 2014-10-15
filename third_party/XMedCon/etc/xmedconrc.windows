@@ -1,0 +1,124 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# filename: xmedconrc.win32                                               #
+#                                                                         #
+# CONFIG File : Medical Image Conversion Utility                          #
+#                                                                         #
+# purpose     : the Gtk+ resource file for Win32 systems                  #
+#                                                                         #
+# project     : (X)MedCon by Erik Nolf                                    #
+#                                                                         #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# $Id: xmedconrc.win32,v 1.6 2007/11/16 22:31:27 enlf Exp $
+
+# Note: When (X)MedCon is installed, this becomes the system wide resource
+#       file. You could copy it to your ${HOME}/.xmedconrc for personal
+#       configurations. Though you better keep the fixed font as fixed. 
+#
+# DEFAULT WIN32 SETTINGS (green/yellow/gray colors + fixed = courier font)
+#
+
+     style "DefaultStyle"
+     {
+       font = "-*-ms sans serif-medium-r-normal--*-110-*-*-*-*-*-*"
+      #font = "-adobe-helvetica-medium-r-normal--*-120-*-*-*-*-*-*"
+      #font = "-*-lucida-medium-r-normal-*-12-*-*-*-*-*-iso8859-1"
+       bg[NORMAL] = { 0.84, 0.84, 0.84 }
+     }
+
+     style "FixedStyle" = "DefaultStyle"
+     {
+       font = "-*-courier new-medium-r-normal--*-110-*-*-*-*-iso8859-1"
+      #font = "-misc-courier-medium-r-normal--*-100-*-*-*-*-*-*"
+     }
+     style "Window" = "DefaultStyle"
+     {
+
+     }
+
+     style "Button" = "DefaultStyle"
+     {
+       fg[NORMAL] = { 0.0, 0.0, 1.0 }
+       fg[PRELIGHT] = { 1.0, 1.0, 0.0 }
+       bg[PRELIGHT] = { 0.0, 0.75, 0.0 }
+       fg[ACTIVE] = { 0.0, 0.0, 1.0 }
+       bg[ACTIVE] = { 0.0, 0.75, 0.0 }
+     }
+
+     style "NormalLabel" = "DefaultStyle"
+     {
+       fg[NORMAL] = { 0.0, 0.0, 1.0 }
+       fg[PRELIGHT] = { 1.0, 1.0, 0.0 }
+       bg[PRELIGHT] = { 0.0, 0.75, 0.0 }
+       fg[ACTIVE] = { 0.0, 0.0, 1.0 }
+       bg[ACTIVE] = { 0.0, 0.75, 0.0 }
+     } 
+
+     style "BarLabel" = "FixedStyle"
+     {
+       fg[NORMAL] = { 0.0, 0.0, 1.0 }
+       fg[PRELIGHT] = { 1.0, 1.0, 0.0 }
+       bg[PRELIGHT] = { 0.0, 0.75, 0.0 }
+       fg[ACTIVE] = { 0.0, 0.0, 1.0 }
+       bg[ACTIVE] = { 0.0, 0.75, 0.0 }
+     }
+
+     style "FixedLabel" = "FixedStyle"
+     {
+       fg[NORMAL] = { 0.0, 0.0, 0.0 }
+       fg[PRELIGHT] = { 1.0, 1.0, 0.0 }
+       bg[PRELIGHT] = { 0.0, 0.75, 0.0 }
+       fg[ACTIVE] = { 0.0, 0.0, 1.0 }
+       bg[ACTIVE] = { 0.0, 0.75, 0.0 }
+     }
+
+     style "Frame" = "DefaultStyle"
+     {
+       fg[NORMAL] = { 0.0, 0.0, 1.0 }
+     }
+
+     style "Menu" = "DefaultStyle"
+     {
+       fg[NORMAL] = { 0.0, 0.0, 1.0 }
+       fg[PRELIGHT] = { 1.0, 1.0, 0.0 }
+       bg[PRELIGHT] = { 0.0, 0.75, 0.0 }
+       fg[ACTIVE] = { 0.0, 0.0, 1.0 }
+       bg[ACTIVE] = { 0.0, 0.75, 0.0 }
+     }
+
+     style "ToggleButton" = "FixedStyle"
+     {
+       fg[NORMAL] = { 0.0, 0.0, 0.0 }
+       fg[ACTIVE] = { 0.0, 0.0, 0.0 }
+       bg[ACTIVE] = { 0.0, 0.75, 0.0 } 
+       fg[PRELIGHT] = { 1.0, 1.0, 0.0 }
+       bg[PRELIGHT] = { 0.0, 0.75, 0.0 }
+     }
+
+     style "FixedText" = "FixedStyle"
+     {
+
+     }
+
+     # These set the widget types to use the styles defined above.
+     # The widget types are listed in the class hierarchy, but could probably be
+     # just listed in this document for the users reference.
+
+     widget_class "GtkWidget" style "DefaultStyle"
+     widget_class "GtkWindow" style "Window"
+     widget_class "GtkDialog" style "Window"
+     widget_class "GtkFileSelection" style "Window"
+     widget_class "*GtkCheckButton*" style "ToggleButton"
+     widget_class "*GtkRadioButton*" style "ToggleButton"
+     widget_class "*GtkButton*" style "Button"
+     widget_class "*GtkLabel*" style "NormalLabel"
+     widget_class "*GtkFrame*" style "Frame"
+     widget_class "*GtkAspectFrame*" style "Frame"
+     widget_class "*Menu*"  style "Menu"
+     widget_class "*Selection*" style "DefaultStyle"
+     widget_class "*GtkText" style "FixedText"
+     widget_class "*GtkNotebook" style "DefaultStyle"
+     widget "*FixedLabel*" style "FixedLabel" 
+     widget "*BarLabel*"   style "BarLabel"
+     widget "*GtkCheckButton*" style "ToggleButton"
+     widget "*GtkRadioButton*" style "ToggleButton"
+     widget "*GtkText*" style "FixedText"
